@@ -22,7 +22,7 @@
     "dev": "wxt",
     "build": "wxt build",
     "zip": "wxt zip",
-    "lint": "eslint .",
+    "lint": "eslint . && oxlint --deny-warnings --vitest-plugin entrypoints utils tests wxt.config.ts vitest.config.ts",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "wxt prepare && tsc --noEmit",
@@ -36,10 +36,10 @@
     "@types/chrome": "0.2.5",
     "eslint": "10.8.1",
     "happy-dom": "20.11.1",
+    "oxlint": "1.77.0",
     "prettier": "3.9.6",
     "rollup": "4.62.4",
-    "typescript": "6.0.3",
-    "typescript-eslint": "8.66.0",
+    "typescript": "7.0.2",
     "vitest": "4.1.10",
     "wxt": "0.21.3"
   }

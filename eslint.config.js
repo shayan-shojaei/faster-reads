@@ -1,18 +1,10 @@
 import eslint from '@eslint/js';
-import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
+export default [
   {
-    ignores: ['.output/**', '.wxt/**', 'coverage/**', 'node_modules/**'],
+    ignores: ['**/*.ts', '.output/**', '.wxt/**', 'coverage/**', 'node_modules/**'],
   },
   eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  {
-    files: ['**/*.ts'],
-    rules: {
-      'no-undef': 'off',
-    },
-  },
   {
     files: ['scripts/**/*.mjs'],
     languageOptions: {
@@ -31,4 +23,4 @@ export default tseslint.config(
       },
     },
   },
-);
+];

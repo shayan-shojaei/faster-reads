@@ -16,7 +16,9 @@ describe('update metadata', () => {
   });
 
   it('rejects prerelease labels and unsafe metadata URLs', () => {
-    expect(() => compareVersions('0.9.0-beta', '0.9.0')).toThrow();
+    expect(() => compareVersions('0.9.0-beta', '0.9.0')).toThrow(
+      'Versions must contain one to four numeric components.',
+    );
     expect(() =>
       parseUpdateMetadata({
         version: '1.0.0',
@@ -25,7 +27,7 @@ describe('update metadata', () => {
         downloadUrl: 'https://example.com/download',
         checksumUrl: 'https://example.com/checksum',
       }),
-    ).toThrow();
+    ).toThrow('Update URLs must use HTTPS.');
   });
 
   it('parses valid release metadata', () => {
