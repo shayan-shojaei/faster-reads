@@ -14,8 +14,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
-      - uses: actions/setup-node@v5
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
         with:
           node-version-file: .nvmrc
           cache: npm
@@ -31,11 +31,11 @@ jobs:
           mv "$source_zip" "$artifact"
           sha256sum "$artifact" > "$artifact.sha256"
       - name: Attest build provenance
-        uses: actions/attest-build-provenance@v3
+        uses: actions/attest-build-provenance@v4
         with:
           subject-path: faster-reads-chrome-*.zip
       - name: Create GitHub release
-        uses: softprops/action-gh-release@v2
+        uses: softprops/action-gh-release@v3
         with:
           prerelease: ${{ startsWith(github.ref_name, 'v0.') }}
           generate_release_notes: true
