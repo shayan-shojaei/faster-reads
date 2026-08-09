@@ -1,0 +1,46 @@
+{
+  "name": "faster-reads",
+  "version": "0.9.0",
+  "description": "A privacy-conscious Chrome extension that adds visual anchors to selected webpage text.",
+  "private": true,
+  "license": "MIT",
+  "author": "Shayan Shojaei",
+  "homepage": "https://shayan-shojaei.github.io/faster-reads/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shayan-shojaei/faster-reads.git"
+  },
+  "bugs": {
+    "url": "https://github.com/shayan-shojaei/faster-reads/issues"
+  },
+  "engines": {
+    "node": ">=24",
+    "npm": ">=11"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate:package": "node scripts/validate-package.mjs",
+    "check": "npm run format:check && npm run lint && npm run typecheck && npm test && npm run build && npm run zip && npm run validate:package"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/chrome": "0.2.5",
+    "eslint": "10.8.1",
+    "happy-dom": "20.11.1",
+    "prettier": "3.9.6",
+    "rollup": "4.62.4",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.66.0",
+    "vitest": "4.1.10",
+    "wxt": "0.21.3"
+  }
+}

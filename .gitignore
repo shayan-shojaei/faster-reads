@@ -1,0 +1,10 @@
+node_modules/
+.wxt/
+.output/
+coverage/
+.DS_Store
+*.crx
+*.key
+*.pem
+.env
+.env.*

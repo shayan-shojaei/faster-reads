@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - name: Validate tag
+        run: test "v$(node -p "require('./package.json').version")" = "$GITHUB_REF_NAME"
+      - run: npm run check
+      - name: Prepare artifacts
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          source_zip="$(find .output -maxdepth 1 -name '*-chrome.zip' -print -quit)"
+          artifact="faster-reads-chrome-v${version}.zip"
+          mv "$source_zip" "$artifact"
+          sha256sum "$artifact" > "$artifact.sha256"
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@v3
+        with:
+          subject-path: faster-reads-chrome-*.zip
+      - name: Create GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          prerelease: ${{ startsWith(github.ref_name, 'v0.') }}
+          generate_release_notes: true
+          files: |
+            faster-reads-chrome-*.zip
+            faster-reads-chrome-*.zip.sha256

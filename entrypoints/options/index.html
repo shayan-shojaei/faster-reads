@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="manifest.open_in_tab" content="true" />
+    <title>Faster Reads settings</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="brand-mark" aria-hidden="true">Fr</div>
+        <div>
+          <h1>Faster Reads</h1>
+          <p>Manage reading intensity, saved sections, and site access.</p>
+        </div>
+      </header>
+
+      <section class="card" aria-labelledby="intensity-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="intensity-heading">Reading intensity</h2>
+            <p>Applied globally to every saved section.</p>
+          </div>
+          <div
+            class="segmented"
+            id="intensity"
+            role="radiogroup"
+            aria-label="Reading intensity"
+          ></div>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="updates-heading">
+        <div class="section-heading">
+          <div>
+            <h2 id="updates-heading">Update checks</h2>
+            <p>Optionally check the Faster Reads GitHub page once a day.</p>
+          </div>
+          <label class="switch-label"
+            ><input id="updates" type="checkbox" /> Check for updates</label
+          >
+        </div>
+        <div id="update-banner" class="update-banner" hidden></div>
+      </section>
+
+      <section aria-labelledby="rules-heading">
+        <div class="rules-title">
+          <div>
+            <h2 id="rules-heading">Saved sections</h2>
+            <p>Path patterns support <code>*</code>. Queries and URL fragments are ignored.</p>
+          </div>
+          <div class="top-actions">
+            <button class="secondary" id="onboarding" type="button">View welcome guide</button>
+            <button class="secondary" id="shortcuts" type="button">Keyboard shortcuts</button>
+          </div>
+        </div>
+        <div id="status" class="status" role="status" aria-live="polite"></div>
+        <div id="rules" class="rule-list"></div>
+      </section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

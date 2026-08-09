@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Faster Reads</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <nav aria-label="Onboarding progress">
+        <img src="/icon/48.png" width="40" height="40" alt="" />
+        <div class="steps" aria-hidden="true">
+          <span class="active"></span><span></span><span></span>
+        </div>
+        <button id="skip" class="text-button" type="button">Skip to settings</button>
+      </nav>
+
+      <section class="panel active" data-step="0">
+        <p class="eyebrow">Welcome to Faster Reads</p>
+        <h1>Guide your eyes through dense text.</h1>
+        <p class="lead">
+          Faster Reads adds weight to the beginning of words in sections you choose, while
+          preserving the page around them.
+        </p>
+        <div class="demo" aria-label="Reading emphasis example">
+          <p>
+            <strong>Rea</strong>ding <strong>lon</strong>ger <strong>art</strong>icles can feel
+            <strong>lig</strong>hter when each word offers a visual anchor.
+          </p>
+        </div>
+        <button class="primary next" type="button">See intensity options</button>
+      </section>
+
+      <section class="panel" data-step="1" hidden>
+        <p class="eyebrow">Make it yours</p>
+        <h1>Choose your reading intensity.</h1>
+        <p class="lead">
+          Your choice is saved with Chrome Sync and can be changed any time in settings.
+        </p>
+        <div
+          id="intensity"
+          class="intensity"
+          role="radiogroup"
+          aria-label="Reading intensity"
+        ></div>
+        <div id="preview" class="demo preview"></div>
+        <div class="actions">
+          <button class="secondary back" type="button">Back</button
+          ><button class="primary next" type="button">Continue</button>
+        </div>
+      </section>
+
+      <section class="panel" data-step="2" hidden>
+        <p class="eyebrow">You stay in control</p>
+        <h1>Select only what you want to change.</h1>
+        <ol class="how-to">
+          <li>
+            <span>1</span>
+            <div>
+              <strong>Open any webpage</strong>
+              <p>
+                Click the Faster Reads toolbar icon or press <kbd>Alt</kbd> + <kbd>Shift</kbd> +
+                <kbd>B</kbd>.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span>2</span>
+            <div>
+              <strong>Choose a section</strong>
+              <p>Hover to preview, then click to save it. Press Escape to cancel.</p>
+            </div>
+          </li>
+          <li>
+            <span>3</span>
+            <div>
+              <strong>Allow that site</strong>
+              <p>Optional site access lets the saved emphasis return on later visits.</p>
+            </div>
+          </li>
+        </ol>
+        <label class="update-choice">
+          <input id="updates" type="checkbox" />
+          <span
+            ><strong>Check GitHub for updates once a day</strong
+            ><small
+              >Optional. This grants access only to the Faster Reads GitHub Pages site. No page or
+              reading data is sent.</small
+            ></span
+          >
+        </label>
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+        <div class="actions">
+          <button class="secondary back" type="button">Back</button
+          ><button id="finish" class="primary" type="button">Finish setup</button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

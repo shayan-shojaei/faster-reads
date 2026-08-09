@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Faster Reads split-weight text mark</title>
+  <defs>
+    <linearGradient id="background" x1="18" y1="12" x2="112" y2="120" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8b5cf6"/>
+      <stop offset="1" stop-color="#5b21b6"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="96" height="96" rx="25" fill="url(#background)"/>
+  <path d="M39 43h19v11H39zm0 20h28v11H39zm0 20h15v11H39z" fill="#fff"/>
+  <path d="M58 43h31v11H58zm9 20h22v11H67zm-13 20h35v11H54z" fill="#ddd6fe" opacity=".72"/>
+</svg>

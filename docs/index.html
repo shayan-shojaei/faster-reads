@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Faster Reads adds visual anchors to sections of webpages you choose."
+    />
+    <meta name="theme-color" content="#6d28d9" />
+    <title>Faster Reads — visual anchors for web reading</title>
+    <link rel="icon" href="./assets/icon-32.png" />
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Faster Reads home"
+        ><img src="./assets/icon-48.png" width="38" height="38" alt="" /><span
+          >Faster Reads</span
+        ></a
+      >
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a><a href="#install">Install</a
+        ><a href="#privacy">Privacy</a
+        ><a href="https://github.com/shayan-shojaei/faster-reads">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Free and open-source Chrome extension</p>
+          <h1>Give every word a <span>visual foothold.</span></h1>
+          <p class="hero-copy">
+            Select the parts of a webpage you want to read. Faster Reads emphasizes word beginnings
+            and remembers your choices—without changing the rest of the page.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#install">Install beta</a
+            ><a class="button secondary" href="https://github.com/shayan-shojaei/faster-reads"
+              >View source</a
+            >
+          </div>
+          <p class="requirements">Chrome 133+ · Version 0.9.0 beta · MIT licensed</p>
+        </div>
+        <div class="demo-card">
+          <div class="window-bar">
+            <span></span><span></span><span></span><small>Reading preview</small>
+          </div>
+          <p id="demo-text">
+            Ideas become easier to follow when every word gives your eyes a clear place to begin.
+          </p>
+          <div class="intensity" role="radiogroup" aria-label="Preview reading intensity">
+            <button type="button" data-intensity="light" role="radio" aria-checked="false">
+              Light
+            </button>
+            <button type="button" data-intensity="medium" role="radio" aria-checked="true">
+              Medium
+            </button>
+            <button type="button" data-intensity="strong" role="radio" aria-checked="false">
+              Strong
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section">
+        <p class="eyebrow">Focused by design</p>
+        <h2>Change a paragraph, an article, or exactly what you choose.</h2>
+        <div class="features">
+          <article>
+            <span>01</span>
+            <h3>Pick a section</h3>
+            <p>Click the toolbar icon, hover over a readable block, and select it.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Set your rhythm</h3>
+            <p>Choose Light, Medium, or Strong emphasis for every saved section.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Return later</h3>
+            <p>Grant access only to sites you choose so saved formatting can reappear.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="install" class="section install">
+        <div class="install-heading">
+          <div>
+            <p class="eyebrow">Manual installation</p>
+            <h2>Ready in a few clicks.</h2>
+            <p>Faster Reads is distributed directly through GitHub during beta.</p>
+          </div>
+          <a
+            class="button primary download"
+            href="https://github.com/shayan-shojaei/faster-reads/releases/download/v0.9.0/faster-reads-chrome-v0.9.0.zip"
+            >Download v0.9.0 beta</a
+          >
+        </div>
+        <ol class="install-steps">
+          <li>
+            <span>1</span>
+            <div>
+              <h3>Download and unzip</h3>
+              <p>Extract the ZIP into a permanent folder that you will keep.</p>
+            </div>
+          </li>
+          <li>
+            <span>2</span>
+            <div>
+              <h3>Open Chrome Extensions</h3>
+              <p>
+                Enter <code>chrome://extensions</code> in the address bar and enable
+                <strong>Developer mode</strong>.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span>3</span>
+            <div>
+              <h3>Load Faster Reads</h3>
+              <p>
+                Click <strong>Load unpacked</strong> and select the extracted folder containing
+                <code>manifest.json</code>.
+              </p>
+            </div>
+          </li>
+          <li>
+            <span>4</span>
+            <div>
+              <h3>Pin and start reading</h3>
+              <p>
+                Pin Faster Reads from Chrome’s Extensions menu, then click its icon on any regular
+                webpage.
+              </p>
+            </div>
+          </li>
+        </ol>
+        <aside>
+          <strong>Updating manually</strong>
+          <p>
+            When the extension shows an <b>UP</b> badge, download the new ZIP, unzip it, replace
+            your existing extension files, then click Reload on <code>chrome://extensions</code>.
+          </p>
+        </aside>
+        <p class="verify">
+          Verify your download with the
+          <a
+            href="https://github.com/shayan-shojaei/faster-reads/releases/download/v0.9.0/faster-reads-chrome-v0.9.0.zip.sha256"
+            >SHA-256 checksum</a
+          >
+          or
+          <a href="https://github.com/shayan-shojaei/faster-reads/attestations"
+            >GitHub build provenance</a
+          >.
+        </p>
+      </section>
+
+      <section id="privacy" class="section privacy">
+        <div>
+          <p class="eyebrow">Private by default</p>
+          <h2>Your reading stays on the page.</h2>
+        </div>
+        <div>
+          <p>
+            Faster Reads has no analytics, ads, accounts, or remote code. Saved site rules and
+            preferences use Chrome Sync. Page content is never collected.
+          </p>
+          <p>
+            Daily update checks are off by default and require your explicit permission. If enabled,
+            the extension requests only the current version file from this site.
+          </p>
+          <a href="https://github.com/shayan-shojaei/faster-reads/blob/main/PRIVACY.md"
+            >Read the full privacy policy →</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="brand">
+        <img src="./assets/icon-48.png" width="32" height="32" alt="" /><span>Faster Reads</span>
+      </div>
+      <p>
+        Built by Shayan Shojaei ·
+        <a href="https://github.com/shayan-shojaei/faster-reads/issues">Support</a> ·
+        <a href="https://github.com/shayan-shojaei/faster-reads/blob/main/LICENSE">MIT License</a>
+      </p>
+      <small
+        >“Bionic Reading” is a trademark of its respective owner. Faster Reads is an independent
+        project and is not affiliated with or endorsed by Bionic Reading.</small
+      >
+    </footer>
+    <script type="module" src="./site.js"></script>
+  </body>
+</html>

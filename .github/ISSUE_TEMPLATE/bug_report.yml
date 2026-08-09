@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible Faster Reads problem
+title: 'bug: '
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please remove private URLs, page content, and personal data before submitting.
+  - type: input
+    id: version
+    attributes:
+      label: Faster Reads version
+      placeholder: 0.9.0
+    validations:
+      required: true
+  - type: input
+    id: chrome
+    attributes:
+      label: Chrome version and operating system
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Include the smallest public example you can provide.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
