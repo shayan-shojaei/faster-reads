@@ -37,14 +37,20 @@ a:focus-visible {
   position: sticky;
   top: 0;
   z-index: 5;
+  width: 100%;
+  border-bottom: 1px solid rgba(231, 229, 228, 0.82);
+  background: rgba(252, 252, 251, 0.94);
+  box-shadow: 0 1px 10px rgba(41, 37, 36, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+.site-header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: min(1160px, calc(100% - 40px));
   margin: 0 auto;
   padding: 18px 0;
-  background: rgba(252, 252, 251, 0.88);
-  backdrop-filter: blur(16px);
 }
 .brand {
   display: inline-flex;
@@ -200,6 +206,7 @@ h1 span {
   color: white;
 }
 .section {
+  scroll-margin-top: 74px;
   padding: 110px max(20px, calc((100% - 1160px) / 2));
 }
 .section h2 {
