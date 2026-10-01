@@ -33,14 +33,14 @@
   },
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "@types/chrome": "0.2.5",
-    "eslint": "10.8.1",
-    "happy-dom": "20.11.1",
-    "oxlint": "1.77.0",
-    "prettier": "3.9.6",
-    "rollup": "4.62.4",
+    "@types/chrome": "0.3.0",
+    "eslint": "10.11.0",
+    "happy-dom": "20.14.5",
+    "oxlint": "1.85.0",
+    "prettier": "3.9.9",
+    "rollup": "4.63.5",
     "typescript": "7.0.2",
-    "vitest": "4.1.10",
-    "wxt": "0.21.3"
+    "vitest": "5.0.2",
+    "wxt": "0.21.4"
   }
 }
